@@ -22,9 +22,7 @@ $(document).ready(function() {
   var result = add(number1,number2);
   $("#output").text(result);
   });
-});
 
-$(document).ready(function() {
   $("form#sub").submit(function(event) {
   event.preventDefault();
   var number1 = parseInt($("#add1").val());
@@ -32,9 +30,7 @@ $(document).ready(function() {
   var result2 = subtract(number1,number2);
   $("#suboutput").text(result2);
   });
-});
 
-$(document).ready(function() {
   $("form#mul").submit(function(event) {
   event.preventDefault();
   var number1 = parseInt($("#add1").val());
@@ -42,9 +38,7 @@ $(document).ready(function() {
   var result3 = multiply(number1,number2);
   $("#muloutput").text(result3);
   });
-});
 
-$(document).ready(function() {
   $("form#div").submit(function(event) {
   event.preventDefault();
   var number1 = parseInt($("#add1").val());
@@ -52,4 +46,18 @@ $(document).ready(function() {
   var result4 = divide(number1,number2);
   $("#divoutput").text(result4);
   });
+
+  $("form#sec").submit(function(event) {
+  event.preventDefault();
+  var beverage = parseInt($("#beverage").val());
+  $("#sub").text(beverage);
+  console.log(beverage);
+  var flavor = $("input:radio[name=flavor]:checked").val();
+  console.log(flavor);
+  var dob = $("#born").val();
+  console.log(dob);
+  var favoriteColor = $("#color").val();
+  console.log(favoriteColor);
+  });
+
 });
